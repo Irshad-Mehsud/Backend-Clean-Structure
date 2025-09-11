@@ -1,10 +1,10 @@
 import { Router } from "express";
 import userRoutes from "../modules/user/routes.js";
-// import productRoutes from "../modules/product/routes.js";
+import productRoutes from "../modules/products/routes.js";
 const router = Router();
 
 router.use("/users",userRoutes);
-// app.use("/products",productRoutes);
+router.use("/products",productRoutes);
 
 
 
