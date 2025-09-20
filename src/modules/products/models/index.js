@@ -6,7 +6,11 @@ const ProductSchema = new Schema(
     description: { type: String, required: true }, // Product details
     price: { type: Number, required: true },  // Product price
     stock: { type: Number, default: 0 },      // Quantity available
-    category: { type: String, required: true }, // e.g. electronics, fashion
+    category: {
+      type: mongoose.Schema.ObjectId,
+      ref:"Category",
+      required: true
+     }, // e.g. electronics, fashion
   },
   { timestamps: true } // adds createdAt & updatedAt automatically
 );

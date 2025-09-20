@@ -1,6 +1,6 @@
-import { getAllData } from "../db/index.js";
+import { getAllPopulatedData, getAllData } from "../db/index.js";
 const getData = () => {
-return getAllData();
+return getAllPopulatedData('category');
 };
 
 export default getData;

@@ -5,15 +5,6 @@ const getAllData = async () => {
     const users = await Model.find({});
     return users;
 };
- const getAllPopulatedData = async (key) => {
-  try {
-    const data = await Model.find({}).populate(key);
-    return data;
-  } catch (err) {
-    console.error('Error in getAllPopulatedData:', err); // log the real error
-    throw err; // or return a custom error if you prefer
-  }
-};
 
 
 const addData = async (userData) => {
@@ -31,7 +22,6 @@ const updatteById = async (id, updateData) => {
 
 
 export {
-    getAllPopulatedData,
     getAllData,
     addData,
     deleteById,
